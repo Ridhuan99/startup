@@ -18,11 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< Updated upstream
-=======
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
->>>>>>> Stashed changes
 </head>
 <body>
     <div id="app">
