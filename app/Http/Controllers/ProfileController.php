@@ -16,8 +16,7 @@ class ProfileController extends Controller
     {
         $profile = DB::table('profiles')->get();
         // dd($profile);
-        return view('profile');
-        //
+        return view('profile',['profiles'-> $profile]);//
     }
 
     /**

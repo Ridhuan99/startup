@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Profile Page update Testt</h1>
+<h1>profilePage</h1>
 @endsection
