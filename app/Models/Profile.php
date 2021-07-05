@@ -9,8 +9,6 @@ class Profile extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'profile_id';
-
     /**
      * The attributes that are mass assignable.
      *

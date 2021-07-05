@@ -14,11 +14,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profile = DB::table('profiles')
-        ->where('name', '!=', 'Ridhuan' )
-        ->get();
-        dd($profile);
-        return view('profile', ['profiles' => $profile]);
+        $profile = DB::table('profiles')->get();
+        // dd($profile);
+        return view('profile',['profiles'-> $profile]);//
     }
 
     /**
