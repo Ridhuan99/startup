@@ -5,5 +5,5 @@
 
 <img src={{ asset('img/payment3.png') }} alt="Girl in a jacket">
 
-<h1>AboutUSsdddd</h1>
+<h1>AboutUSsddddyyyyyyyyyTESTTTTTTTTT</h1>
 @endsection
