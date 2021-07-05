@@ -9,6 +9,8 @@ class Profile extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'profile_id';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,5 +28,5 @@ class Profile extends Model
         return $this->belongsTo(User::class);
     }
 
-    
+
 }
