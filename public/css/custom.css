@@ -4,3 +4,174 @@
 
 
 /* HomePage */
+
+
+/* Contact US */
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 100%;
+}
+
+.top-left {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+  /* font-weight: bold; */
+  font-size: 5em;
+  color: white;
+  font-family: Tahoma;
+  font-style:
+}
+
+.sizeP{
+  font-size: 0.4em;
+}
+
+.divtwo{
+  background-color: #053742;
+  text-align: center;
+  font-family: Tahoma;
+  padding-top: 5%;
+  padding-bottom: 6%;
+  color: white;
+}
+
+hr.style-one{
+  border: 0.5px solid black  ;
+  opacity: 0.2;
+}
+
+.formone{
+  padding-top: 3%;
+  float: left;
+  width: 50%;
+  font-family: Tahoma;
+}
+
+.formone:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.afterForm{
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #A7BBC7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* ABOUT US PAGE */
+
+h5.topone{
+  font-size: 0.5em;
+}
+
+.colone{
+  padding-top: 3%;
+  float: left;
+  width: 50%;
+  font-family: Tahoma;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.colone:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.afterColone{
+  margin-top: 5%;
+  text-align: center;
+  background-color: E8F0F2;
+}
+
+.coltwo{
+  padding-top: 3%;
+  float: left;
+  width: 50%;
+  font-family: Tahoma;
+  text-align: center;
+  /* background-color: #A2DBFA; */
+  padding-top: 5%;
+}
+
+.coltwo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.afterColtwo{
+  margin-top: 5%;
+  text-align: center;
+  background-color: E8F0F2;
+}
+
+.director{
+  padding-top: 10%;
+  text-align: center;
+}
+
+.boardImage{
+  margin-left: 15%;
+  float: left;
+  display: inline-block;
+}
+.boardImage2{
+  float:left;
+}
+
+
+
+
+/* /////////////////////////////////// */
+/* .director{
+  padding-top: 3%;
+  float: left;
+  width: 50%;
+  font-family: Tahoma;
+  text-align: center;
+  padding-top: 5%;
+}
+.director:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.afterDirector{
+  margin-top: 5%;
+  text-align: center;
+  background-color: E8F0F2;
+} */
+/* /////////////////////////// */
