@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark text-light  shadow-sm py-4" style="background-color:#053742">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -52,6 +53,18 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
+                            @if (Route::has('aboutus'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('aboutus') }}">{{ __('About Us') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('contactus'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('contactus') }}">{{ __('Contact Us') }}</a>
+                                </li>
+                            @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -78,6 +91,11 @@
 
         <main class="py-4">
             @yield('content')
+
+            <section class = "pt-4">
+                    @include('footer')
+            </section>
+
         </main>
 
     </div>

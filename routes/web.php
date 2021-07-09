@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contactus', function () {
+    return view('contactus');
+})->name('contactus');
+
 Route::get('/aboutus', function () {
     return view('aboutus');
-});
+})->name('aboutus');
 
 
 
