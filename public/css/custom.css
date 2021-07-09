@@ -91,6 +91,16 @@ h5.topone{
   font-size: 0.5em;
 }
 
+.taglineDiv {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+  font-size: 3.5em;
+  color: white;
+  font-family: Tahoma;
+  font-style:
+}
+
 .aboutdivone{
   padding-top: 3%;
   font-family: Tahoma;
@@ -101,6 +111,7 @@ h5.topone{
   text-align: center;
   margin-top: 11%;
 }
+
 
 .aboutdivtwo{
   margin-top: 5%;

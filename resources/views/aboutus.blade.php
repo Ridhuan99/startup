@@ -5,7 +5,7 @@
 <section>
   <div class="row">
     <div class="col-md-12">
-      <div class="top-left">
+      <div class="taglineDiv">
         <h5 class="topone">"A better living, through Order"</h5>
         <p>About US</p>
       </div>
