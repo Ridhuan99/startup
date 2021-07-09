@@ -4,20 +4,17 @@
 
 <section>
   <div class="row">
-    <div class="col-md-12">
-      <div class="contactDivone">
-        <p>Get in touch with US</p>
-        <div class="sizeP"><p>Leave us message or any feedback.</p>
-          <p>We'll get in touch with you</p>
-        </div>
-      </div>
+    <div class="col-md-12 parentDivOne">
       <img src={{ asset('img/about6.jpg') }} style="width:100%" alt="Girl in a jacket">
+      <div class="contactDivone">
+        <p class="aboutustag">Get in touch with US </p>
+        <h3>Leave us message or any feedback We'll get in touch with you</h3>
+      </div>
     </div>
   </div>
-
 </section>
 
-<section>
+<section >
   <div class="row">
     <div class="col-md-12">
       <div class="contactdivtwo">
@@ -37,7 +34,7 @@
 </section>
 
 
-<section>
+<section style="background-color:#A4D6D1">
   <div class="row">
     <div class="col-md-6">
 

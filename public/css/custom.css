@@ -36,16 +36,37 @@
   width:100%;
   border-radius: 20px;
 }
+
 /* HomePage */
+.kotak{
+  position: relative;
+}
+
+.homesearch{
+  position:absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  margin: 20px;
+}
+
+.rounded{
+  height: 60px;
+  margin-right: 10px;
+}
 
 
 /* Contact US */
+
+.parentDivOne{
+  position: relative;
+}
+
 .contactDivone {
-  position: absolute;
-  top: 30%;
-  left: 16px;
-  /* font-weight: bold; */
-  font-size: 5em;
+  position:absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
   color: white;
   font-family: Tahoma;
 }
@@ -55,17 +76,16 @@
 }
 
 .contactdivtwo{
-  background-color: #053742;
   text-align: center;
   font-family: Tahoma;
   padding-top: 5%;
   padding-bottom: 6%;
-  color: white;
+  color: black;
 }
 
 hr.style-one{
   border: 0.5px solid black  ;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .contactForm{
@@ -119,53 +139,61 @@ input[type=submit]:hover {
 
 /* ABOUT US PAGE */
 
-h5.topone{
-  font-size: 0.5em;
+.aboutustag{
+  font-size: 3.5rem;
 }
 
 .taglineDiv {
   position: absolute;
   top: 30%;
-  left: 16px;
-  font-size: 3.5em;
+  left: 30px;
   color: white;
   font-family: Tahoma;
-  font-style:
+  font-weight: bold;
 }
 
 .aboutdivone{
-  padding-top: 3%;
   font-family: Tahoma;
   text-align: center;
-  padding-top: 5%;
+  margin-top: 11%;
+  margin-bottom:11%;
+  margin-left: 11%;
 }
 .aboutdivonecoltwo{
   text-align: center;
   margin-top: 11%;
+  margin-bottom:11%;
 }
 
 
 .aboutdivtwo{
   margin-top: 5%;
   text-align: center;
+  margin-top: 11%;
+  margin-bottom:11%;
+
 }
 
 .aboutdivtwocoltwo{
-  margin-top: 7%;
+  margin-top: 5%;
   text-align: center;
-  background-color: E8F0F2;
+  margin-top: 11%;
+  margin-bottom:11%;
 }
 
 .gambarWanj{
   text-align: center;
+  margin-bottom:11%;
 }
 
 .gambarHafiz{
   text-align: center;
+  margin-bottom:11%;
 }
 
 .gambarHakim{
   text-align: center;
+  margin-bottom:11%;
 }
 
 .BoardTitle{
