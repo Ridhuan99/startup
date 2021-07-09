@@ -48,11 +48,7 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                          
 
                             @if (Route::has('aboutus'))
                                 <li class="nav-item">
@@ -89,10 +85,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
 
-            <section class = "pt-4">
+            <section class = "">
                     @include('footer')
             </section>
 

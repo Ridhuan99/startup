@@ -15,7 +15,7 @@
       </a>
     </div>
 
-    <div id="Login" class="w3-container city">
+    <div id="Login" class="w3-container city py-3">
       <div class="card login">
 
           <div class="card-body">
@@ -83,8 +83,8 @@
       </div>
     </div>
 
-    <div id="Register" class="w3-container city" style="display:none">
-                  <div class="card login">
+    <div id="Register" class="w3-container city py-3" style="display:none">
+                  <div class="card login ">
 
                       <div class="card-body">
                           <form method="POST" action="{{ route('register') }}">

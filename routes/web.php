@@ -28,6 +28,9 @@ Route::get('/aboutus', function () {
 
 
 Auth::routes();
+Route::get('/register', function () {
+    return redirect()->back();
+})->name('register');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('Profile');
