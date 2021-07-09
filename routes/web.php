@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Route::get('/contactus', function () {
     return view('contactus');
-});
+})->name('contactus');
 
 Route::get('/aboutus', function () {
     return view('aboutus');
-});
+})->name('aboutus');
 
 
 
