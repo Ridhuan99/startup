@@ -7,15 +7,7 @@
 
 
 /* Contact US */
-
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  max-width: 100%;
-}
-
-.top-left {
+.contactDivone {
   position: absolute;
   top: 30%;
   left: 16px;
@@ -30,7 +22,7 @@
   font-size: 0.4em;
 }
 
-.divtwo{
+.contactdivtwo{
   background-color: #053742;
   text-align: center;
   font-family: Tahoma;
@@ -44,25 +36,20 @@ hr.style-one{
   opacity: 0.2;
 }
 
-.formone{
+.contactForm{
   padding-top: 3%;
   float: left;
-  width: 50%;
+  width: 60%;
   font-family: Tahoma;
 }
 
-.formone:after {
-  content: "";
-  display: table;
-  clear: both;
+.card{
+  align-items: center;
+  margin-top: 7%;
+  margin-left: 7%;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
 }
-
-.afterForm{
-  margin-top: 5%;
-  text-align: center;
-}
-
-
 
 input[type=text], select {
   width: 100%;
@@ -89,89 +76,57 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+
+.contactDivThree{
+  margin-top: 25%;
+  text-align: center;
+}
+
+
+
+
 /* ABOUT US PAGE */
 
 h5.topone{
   font-size: 0.5em;
 }
 
-.colone{
+.aboutdivone{
   padding-top: 3%;
-  float: left;
-  width: 50%;
   font-family: Tahoma;
   text-align: center;
   padding-top: 5%;
 }
-
-.colone:after {
-  content: "";
-  display: table;
-  clear: both;
+.aboutdivonecoltwo{
+  text-align: center;
+  margin-top: 11%;
 }
 
-.afterColone{
+.aboutdivtwo{
   margin-top: 5%;
+  text-align: center;
+}
+
+.aboutdivtwocoltwo{
+  margin-top: 7%;
   text-align: center;
   background-color: E8F0F2;
 }
 
-.coltwo{
+.gambarWanj{
+  text-align: center;
+}
+
+.gambarHafiz{
+  text-align: center;
+}
+
+.gambarHakim{
+  text-align: center;
+}
+
+.BoardTitle{
   padding-top: 3%;
-  float: left;
-  width: 50%;
-  font-family: Tahoma;
-  text-align: center;
-  /* background-color: #A2DBFA; */
-  padding-top: 5%;
-}
-
-.coltwo:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.afterColtwo{
-  margin-top: 5%;
-  text-align: center;
-  background-color: E8F0F2;
-}
-
-.director{
-  padding-top: 10%;
+  padding-bottom: 3%;
   text-align: center;
 }
-
-.boardImage{
-  margin-left: 15%;
-  float: left;
-  display: inline-block;
-}
-.boardImage2{
-  float:left;
-}
-
-
-
-
-/* /////////////////////////////////// */
-/* .director{
-  padding-top: 3%;
-  float: left;
-  width: 50%;
-  font-family: Tahoma;
-  text-align: center;
-  padding-top: 5%;
-}
-.director:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.afterDirector{
-  margin-top: 5%;
-  text-align: center;
-  background-color: E8F0F2;
-} */
-/* /////////////////////////// */
