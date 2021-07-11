@@ -36,3 +36,169 @@
   border-radius: 20px;
 }
 /* HomePage */
+<<<<<<< Updated upstream
+=======
+.kotak{
+  position: relative;
+}
+
+.homesearch{
+  position:absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  margin: 20px;
+}
+
+.rounded{
+  height: 60px;
+  margin-right: 10px;
+}
+
+
+/* Contact US */
+
+.parentDivOne{
+  position: relative;
+}
+
+.contactDivone {
+  position:absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  color: white;
+  font-family: Tahoma;
+}
+
+.sizeP{
+  font-size: 0.4em;
+}
+
+.contactdivtwo{
+  text-align: center;
+  font-family: Tahoma;
+  padding-top: 5%;
+  padding-bottom: 6%;
+  color: black;
+}
+
+hr.style-one{
+  border: 0.5px solid black  ;
+  opacity: 0.1;
+}
+
+.contactForm{
+  padding-top: 3%;
+  float: left;
+  width: 60%;
+  font-family: Tahoma;
+}
+
+.card2{
+  align-items: center;
+  margin-top: 7%;
+  margin-left: 7%;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #A7BBC7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.contactDivThree{
+  margin-top: 25%;
+  text-align: center;
+}
+
+
+
+
+/* ABOUT US PAGE */
+
+.aboutustag{
+  font-size: 3.5rem;
+}
+
+.taglineDiv {
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  color: white;
+  font-family: Tahoma;
+  font-weight: bold;
+}
+
+.aboutdivone{
+  font-family: Tahoma;
+  text-align: center;
+  margin-top: 11%;
+  margin-bottom:11%;
+  margin-left: 11%;
+}
+.aboutdivonecoltwo{
+  text-align: center;
+  margin-top: 11%;
+  margin-bottom:11%;
+}
+
+
+.aboutdivtwo{
+  margin-top: 5%;
+  text-align: center;
+  margin-top: 11%;
+  margin-bottom:11%;
+
+}
+
+.aboutdivtwocoltwo{
+  margin-top: 5%;
+  text-align: center;
+  margin-top: 11%;
+  margin-bottom:11%;
+}
+
+.gambarWanj{
+  text-align: center;
+  margin-bottom:11%;
+}
+
+.gambarHafiz{
+  text-align: center;
+  margin-bottom:11%;
+}
+
+.gambarHakim{
+  text-align: center;
+  margin-bottom:11%;
+}
+
+.BoardTitle{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+>>>>>>> Stashed changes
