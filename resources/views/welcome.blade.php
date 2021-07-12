@@ -2,8 +2,14 @@
 
 @section('content')
 
-<section>
+<section >
     <div class="kotak">
+
+      <div class="input-group p-3 mx-auto homesearch" >
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-warning">search</button>
+      </div>
 
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -27,11 +33,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div class="input-group p-3 mx-auto homesearch" >
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-          aria-describedby="search-addon" />
-        <button type="button" class="btn btn-warning">search</button>
-      </div>
+
     </div>
 </section>
 <section>
