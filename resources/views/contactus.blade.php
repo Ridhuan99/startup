@@ -2,13 +2,15 @@
 
 @section('content')
 
+<div class="overallContact">
+
 <section>
   <div class="row">
-    <div class="col-md-12 parentDivOne">
+    <div class="col-md-12">
       <img src={{ asset('img/about6.jpg') }} style="width:100%" alt="Girl in a jacket">
       <div class="contactDivone">
-        <p class="aboutustag">Get in touch with US </p>
-        <h3>Leave us message or any feedback We'll get in touch with you</h3>
+        <h1 class="contactustag"> Get in touch with US </h1>
+        <h3 class="contactusDes">Leave us message or any feedback We'll get in touch with you</h3>
       </div>
     </div>
   </div>
@@ -70,7 +72,7 @@
   </div>
 </section>
 
-
+</div>
 
 
 

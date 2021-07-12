@@ -2,11 +2,14 @@
 
 @section('content')
 
+
+<div class="overallContact">
+
 <section>
   <div class="row">
     <div class="col-md-12">
       <div class="taglineDiv">
-        <h5 >"A better living, through Order"</h5>
+        <h5 class="abouttagLine" >"A better living, through Order"</h5>
         <h1 class="aboutustag">About US</h1>
       </div>
       <img src={{ asset('img/contact3.jpg') }} style="width:100%" alt="Girl in a jacket">
@@ -44,13 +47,13 @@
       <div class="aboutdivtwocoltwo">
         <h1>OUR SERVICES</h1><br>
         <hr style="width:50%" align="center" >
-        <img src={{ asset('img/hardware.png') }} style="width:70%" alt="hardware">
+        <img src={{ asset('img/hardware.png') }} style="width:10%" alt="hardware">
         <h5>Smart Hardware</h5>
         <hr style="width:50%" align="center">
-        <img src={{ asset('img/construction.png') }} style="width:70%" alt="construction">
+        <img src={{ asset('img/construction.png') }} style="width:10%" alt="construction">
         <h5>Construction Services</h5>
         <hr style="width:50%" align="center">
-        <img src={{ asset('img/fruit.png') }} style="width:70%" alt="Fruit">
+        <img src={{ asset('img/fruits.png') }} style="width:10%" alt="Fruit">
         <h5>A Fruits HUB</h5>
         <hr style="width:50%" align="center">
       </div>
@@ -95,6 +98,8 @@
 
   </div>
 </section>
+
+</div>
 
 
 
