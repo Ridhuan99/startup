@@ -38,16 +38,15 @@
 /* HomePage */
 <<<<<<< Updated upstream
 =======
-.kotak{
+/* .kotak{
   position: relative;
-}
+} */
 
 .homesearch{
-  position:absolute;
-  top: 30%;
-  left: 15%;
+  height: 30%;
   width: 70%;
   margin: 20px;
+  overflow: hidden;
 }
 
 .rounded{

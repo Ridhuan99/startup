@@ -33,4 +33,4 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('Profile');
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
