@@ -40,7 +40,7 @@
   <div class="row">
     <div class="col-md-6">
 
-      <div class="card">
+      <div class="card card2">
         <div class="contactForm">
           <h5>Leave your message here</h5>
             <form action="/action_page.php">

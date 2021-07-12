@@ -82,7 +82,7 @@
 
       <div class="col-md-4">
         <div class="gambarHafiz">
-          <img src={{ asset('img/hafiz2.png') }} style="width:55%" alt="Girl in a jacket"><br><br>
+          <img src={{ asset('img/hafiz2.png') }} style="width:50%" alt="Girl in a jacket"><br><br>
           <h4>Hafiz Aiman</h4>
           <h5>CEO</h5>
         </div>
