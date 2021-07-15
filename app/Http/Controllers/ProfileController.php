@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 
 
 class ProfileController extends Controller
@@ -33,22 +34,7 @@ class ProfileController extends Controller
         // return view('profile',['profiles' => $profile]);
     }
 
-    public function index2()
-    {
-         // $user = Auth::profile();
-        $user = Auth::user();
 
-        $profile = DB::table('profiles')
-        ->where('user_id','=',$user->user_id)
-        ->get();
-        // $userz = DB::table('users')->get();
-        // dd($profile);
-        // dd($user->user_id);
-
-        // return view('profile',['users'=> $user , 'profiles'=> $profile]);
-        return view('update-profile',['users'=> $user, 'profiles'=> $profile]);
-        // return view('profile',['profiles' => $profile]);
-    }
 
 
     /**
@@ -91,7 +77,12 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        // return view('update-profile')->with('user', auth()->user());
+        // $user = Auth::user();
+        // return view('users.edit', compact('user'));
+        $user = Auth::user();
+        return view('update-profile', compact('user'));
+
     }
 
     /**
@@ -101,10 +92,42 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+
+     public function PUpdate()
+     {
+          $user = Auth::user();
+          return view('update-profile',['users'=> $user]);
+
+
+       // dd($request);
+
+     }
+
+
+    public function update(Request $request)
     {
-        //
+      // $user = auth()->user();
+      // $user = User::findOrFail($user_id);
+      // $user->email = $request->get('email');
+      // $user->save();
+      // return redirect('profile')->with('status', 'Profile updated!');
+      // dd($request);
+      $user = Auth::user();
+      if ($user) {
+        $user->email= $request['email'];
+        $user->save();
+        // return Redirect('/profile')->with('success',"Successfully updated");
+        return Redirect()->route('profile')->with('success',"Successfully updated");
+      }else{
+        return Redirect()->back();
+      }
+
     }
+
+
+
+
+
 
     /**
      * Remove the specified resource from storage.

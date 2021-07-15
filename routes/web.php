@@ -38,8 +38,16 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 ->name('profile')
 ->middleware('auth');
 
-Route::get('/update-profile', [App\Http\Controllers\ProfileController::class, 'index2'])
+Route::get('/update-profile', [App\Http\Controllers\ProfileController::class, 'PUpdate'])
 ->name('update-profile');
+
+Route::post('/update-profile/update', [App\Http\Controllers\ProfileController::class, 'update'])
+->name('update.user.profile');
+
+
+
+
+
 
 
 Route::resource('profiles', ProfileController::class);
