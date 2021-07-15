@@ -215,4 +215,53 @@ input[type=submit]:hover {
   padding-bottom: 3%;
   text-align: center;
 }
+
+/* ----------------Profile */
+.userdata td {
+	padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 0%;
+  padding-top: 3%;
+
+}
+.userdata {
+	width:40%;
+	border-radius: 15px;
+	background: #132743;
+	color: white;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5vw;
+  margin-top: 2%;
+
+}
+
+.userProfile{
+  align-items: center;
+}
+
+.profileHeader{
+  padding-top: 2%;
+  margin-left: 2%;
+}
+
+.profileBackground{
+  background-color: #DDDDDD;
+}
+
+h1.hiUser{
+  margin-left: 10%;
+}
+
+.editProfileButton{
+  text-align: center;
+}
+
+
+
+
+
+
+
 >>>>>>> Stashed changes

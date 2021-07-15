@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 class ProfileController extends Controller
 {
@@ -12,12 +14,42 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
-        $profile = DB::table('profiles')->get();
+         // $user = Auth::profile();
+        $user = Auth::user();
+
+        $profile = DB::table('profiles')
+        ->where('user_id','=',$user->user_id)
+        ->get();
+        // $userz = DB::table('users')->get();
         // dd($profile);
-        return view('profile',['profiles'=> $profile]);
+        // dd($user->user_id);
+
+        // return view('profile',['users'=> $user , 'profiles'=> $profile]);
+        return view('profile',['users'=> $user, 'profiles'=> $profile]);
+        // return view('profile',['profiles' => $profile]);
     }
+
+    public function index2()
+    {
+         // $user = Auth::profile();
+        $user = Auth::user();
+
+        $profile = DB::table('profiles')
+        ->where('user_id','=',$user->user_id)
+        ->get();
+        // $userz = DB::table('users')->get();
+        // dd($profile);
+        // dd($user->user_id);
+
+        // return view('profile',['users'=> $user , 'profiles'=> $profile]);
+        return view('update-profile',['users'=> $user, 'profiles'=> $profile]);
+        // return view('profile',['profiles' => $profile]);
+    }
+
 
     /**
      * Show the form for creating a new resource.
