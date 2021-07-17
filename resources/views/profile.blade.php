@@ -79,7 +79,7 @@
               <tr>
                 <td colspan=2>
                   <div class="editProfileButton">
-                    <a class="btn btn-primary" href="{{ route('update-profile') }}">Update Profile</a>
+                    <a class="btn btn-primary" href="{{ route('update-profile') }}">Edit Profile</a>
 
                   </div>
                 </td>

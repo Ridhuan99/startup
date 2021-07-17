@@ -258,20 +258,22 @@ h1.hiUser{
   text-align: center;
 }
 
-.updateForm{
+/* .updateForm{
   padding-top: 3%;
   width: 100%;
   font-family: Tahoma;
-}
+} */
 
 .profilecard{
-  align-items: center;
+  padding-top: 3%;
   margin-top: 7%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15%;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
   width: 50%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .profileform{
@@ -279,17 +281,9 @@ h1.hiUser{
   text-align: center;
 }
 
-input[type=email], select {
-  width: 70%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-button[type=submit] {
+button[class=profilesubmit] {
+  margin-top: 5%;
   width: 50%;
   background-color: #A7BBC7;
   color: white;
@@ -298,10 +292,9 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   margin-left: 25%;
-
 }
 
-button[type=submit]:hover {
+button[class=profilesubmit]:hover {
   background-color: #45a049;
 }
 

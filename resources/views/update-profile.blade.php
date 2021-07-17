@@ -2,6 +2,15 @@
 
 @section('content')
 
+  <?php
+      foreach ($profiles as $item) {
+          $profileId = $item->profile_id;
+          $name       = $item->name;
+          $age        = $item->age;
+          $phone      = $item->phone_number;
+          $address    = $item->address;}
+  ?>
+
 
 
   {{-- <form method="POST" action="{{ route('edit-profile', Auth::user()->user_id) }}">
@@ -31,11 +40,46 @@
       <form method="post" action="{{route('update.user.profile')}}">
           @csrf
 
-          <div class="form-group profileform">
-            <label for="email">Email address: </label>
-            <input type="email" name="email"  value="{{ $users->email }}" />
+          <div class="form-group row">
+            <label for="name" class="col-sm-4 col-form-label">Name:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="username" id="profilName" value="{{ $name }}">
+            </div>
           </div>
-            <button type="submit">Submit</button>
+
+          <div class="form-group row">
+            <label for="email" class="col-sm-4 col-form-label">Email address:</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email" id="profileEmail" value="{{ $users->email }}">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="profilePhone" class="col-sm-4 col-form-label">Phone Number:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="phone" id="profilePhone" value="{{ $phone }}">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="profileAge" class="col-sm-4 col-form-label">Age:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="age" id="profileAge" value="{{ $age }}">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="profileAddress" class="col-sm-4 col-form-label">Address:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="address" id="profileAddress" value="{{ $address }}">
+            </div>
+          </div>
+
+
+
+
+
+            <button type="submit" class="profilesubmit">Submit</button>
 
       </form>
 

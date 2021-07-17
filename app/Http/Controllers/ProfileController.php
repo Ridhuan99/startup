@@ -96,7 +96,13 @@ class ProfileController extends Controller
      public function PUpdate()
      {
           $user = Auth::user();
-          return view('update-profile',['users'=> $user]);
+          $profile = DB::table('profiles')
+          ->where('user_id','=',$user->user_id)
+          ->get();
+
+          return view('update-profile',['users'=> $user , 'profiles' => $profile]);
+
+
 
 
        // dd($request);
@@ -113,10 +119,32 @@ class ProfileController extends Controller
       // return redirect('profile')->with('status', 'Profile updated!');
       // dd($request);
       $user = Auth::user();
+      // $profile = DB::table('profiles')
+      // ->where('user_id','=',$user->user_id)
+      // ->get();
+
       if ($user) {
         $user->email= $request['email'];
-        $user->save();
+
+        if($user->save()){
+          $profile = DB::table('profiles')
+          ->where('user_id','=',$user->user_id)
+          ->update(['name' => $request->username ,'phone_number' => $request->phone , 'age' => $request->age, 'address' => $request->address ]);
+
+          // $profile->name= $request['username'];
+
+          // dd($profile->name);
+        }
+        // $profile->save();
+
+
+        // $user->save();
+      // if($profile){
+      //   $profile->name= $request['username'];
+      //   $profiles->save();
+      // }
         // return Redirect('/profile')->with('success',"Successfully updated");
+
         return Redirect()->route('profile')->with('success',"Successfully updated");
       }else{
         return Redirect()->back();
