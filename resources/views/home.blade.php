@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+  <section class = "">
+          @include('homenavbar')
+  </section>
   <section >
       <div class="kotak">
 

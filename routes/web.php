@@ -13,17 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/admin-dashboard', function () {
+    return view('admin/dashboard');
+})->name('admin.dashboard');
+
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome');
+})->name('welcome')->middleware('guest');
 
 Route::get('/contactus', function () {
     return view('contactus');
-})->name('contactus');
+})->name('contactus')->middleware('guest');
 
 Route::get('/aboutus', function () {
     return view('aboutus');
-})->name('aboutus');
+})->name('aboutus')->middleware('guest');
 
 
 
@@ -43,11 +47,6 @@ Route::get('/update-profile', [App\Http\Controllers\ProfileController::class, 'P
 
 Route::post('/update-profile/update', [App\Http\Controllers\ProfileController::class, 'update'])
 ->name('update.user.profile');
-
-
-
-
-
 
 
 Route::resource('profiles', ProfileController::class);
