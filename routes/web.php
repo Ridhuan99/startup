@@ -29,7 +29,12 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 })->name('aboutus')->middleware('guest');
 
+Route::get('/admindashboard', function () {
+    return view('admindashboard');
+})->name('admindashboard');
 
+
+Route::get('/manageuser', [App\Http\Controllers\ManageUserController::class, 'index'])->name('manageuser');
 
 Auth::routes();
 Route::get('/register', function () {
