@@ -36,6 +36,7 @@ Route::get('/admindashboard', function () {
 
 
 Route::get('/manageuser', [App\Http\Controllers\ManageUserController::class, 'index'])->name('manageuser');
+Route::post('/manageuser/{user_id}', [App\Http\Controllers\ManageUserController::class, 'update'])->name('manageuser2');
 
 Auth::routes();
 Route::get('/register', function () {
