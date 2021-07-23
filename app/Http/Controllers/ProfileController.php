@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -77,11 +78,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        // return view('update-profile')->with('user', auth()->user());
-        // $user = Auth::user();
-        // return view('users.edit', compact('user'));
-        $user = Auth::user();
-        return view('update-profile', compact('user'));
+
 
     }
 
@@ -93,62 +90,43 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function PUpdate()
+
+     public function profile_update($user_id)
      {
-          $user = Auth::user();
-          $profile = DB::table('profiles')
-          ->where('user_id','=',$user->user_id)
+          $user = $user_id;
+          $email = DB::table('users')
+          ->select('email')
+          ->where('user_id','=',$user)
           ->get();
 
-          return view('update-profile',['users'=> $user , 'profiles' => $profile]);
+
+          $profile = DB::table('profiles')
+          ->where('user_id','=',$user)
+          ->get();
 
 
+          return view('update-profile',['users'=> $user , 'profiles' => $profile , 'email' => $email]);
 
-
-       // dd($request);
 
      }
 
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
+
     {
-      // $user = auth()->user();
-      // $user = User::findOrFail($user_id);
-      // $user->email = $request->get('email');
-      // $user->save();
-      // return redirect('profile')->with('status', 'Profile updated!');
-      // dd($request);
-      $user = Auth::user();
-      // $profile = DB::table('profiles')
-      // ->where('user_id','=',$user->user_id)
-      // ->get();
-
-      if ($user) {
-        $user->email= $request['email'];
-
-        if($user->save()){
-          $profile = DB::table('profiles')
-          ->where('user_id','=',$user->user_id)
-          ->update(['name' => $request->username ,'phone_number' => $request->phone , 'age' => $request->age, 'address' => $request->address ]);
-
-          // $profile->name= $request['username'];
-
-          // dd($profile->name);
-        }
-        // $profile->save();
+      $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'address' => 'required|string|max:255',
+        'phone_number' => 'required|string|max:20',
+        'age' => 'required|string|max:3'
+      ]);
 
 
-        // $user->save();
-      // if($profile){
-      //   $profile->name= $request['username'];
-      //   $profiles->save();
-      // }
-        // return Redirect('/profile')->with('success',"Successfully updated");
+        $profile = DB::table('profiles')
+        ->where('user_id','=',$id)
+        ->update(['name' => $request->name , 'age' => $request->age, 'phone_number' => $request->phone_number, 'address' => $request->address]);
 
         return Redirect()->route('profile')->with('success',"Successfully updated");
-      }else{
-        return Redirect()->back();
-      }
 
     }
 

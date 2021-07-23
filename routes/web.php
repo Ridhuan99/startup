@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,11 +48,9 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 ->name('profile')
 ->middleware('auth');
 
-Route::get('/update-profile', [App\Http\Controllers\ProfileController::class, 'PUpdate'])
-->name('update-profile');
 
-Route::post('/update-profile/update', [App\Http\Controllers\ProfileController::class, 'update'])
-->name('update.user.profile');
+Route::get('/update-profile/{user_id}', [App\Http\Controllers\ProfileController::class, 'profile_update'])
+->name('update-profile');
 
 
 Route::resource('profiles', ProfileController::class);

@@ -7,8 +7,14 @@
           $profileId = $item->profile_id;
           $name       = $item->name;
           $age        = $item->age;
-          $phone      = $item->phone_number;
+          $phone_number = $item->phone_number;
           $address    = $item->address;}
+  ?>
+
+  <?php
+      foreach ($email as $email) {
+          $email = $email->email;
+         }
   ?>
 
 
@@ -37,27 +43,33 @@
 <div class="col-md-12">
   <div class="card profilecard">
     <div class="updateForm">
-      <form method="post" action="{{route('update.user.profile')}}">
+      <form class="needs-validation" action="{{route('profiles.update', Auth::user()->user_id)}}" method="post">
           @csrf
+          @method('PUT')
+
 
           <div class="form-group row">
             <label for="name" class="col-sm-4 col-form-label">Name:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" name="username" id="profilName" value="{{ $name }}">
-            </div>
-          </div>
+              <input type="text" class="form-control" name="name" id="profilName" value="{{ $name }}">
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 
-          <div class="form-group row">
-            <label for="email" class="col-sm-4 col-form-label">Email address:</label>
-            <div class="col-sm-8">
-              <input type="email" class="form-control" name="email" id="profileEmail" value="{{ $users->email }}">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="profilePhone" class="col-sm-4 col-form-label">Phone Number:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" name="phone" id="profilePhone" value="{{ $phone }}">
+              <input type="text" class="form-control" name="phone_number" id="profilePhone" value="{{ $phone_number }}">
+              @error('phone_number')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
           </div>
 
@@ -65,6 +77,11 @@
             <label for="profileAge" class="col-sm-4 col-form-label">Age:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" name="age" id="profileAge" value="{{ $age }}">
+              @error('age')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
           </div>
 
@@ -72,11 +89,13 @@
             <label for="profileAddress" class="col-sm-4 col-form-label">Address:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" name="address" id="profileAddress" value="{{ $address }}">
+              @error('address')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
           </div>
-
-
-
 
 
             <button type="submit" class="profilesubmit">Submit</button>

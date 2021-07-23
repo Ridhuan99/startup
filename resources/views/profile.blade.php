@@ -49,7 +49,7 @@
     							<label for="text">Email</label>
     						</td>
     						<td>
-    							<label for="text">: <?php echo $users->email; ?></label>
+    							<label for="text">: <?php echo Auth::user()->email; ?></label>
     						</td>
     					</tr>
               <tr>
@@ -79,7 +79,8 @@
               <tr>
                 <td colspan=2>
                   <div class="editProfileButton">
-                    <a class="btn btn-primary" href="{{ route('update-profile') }}">Edit Profile</a>
+
+                    <a class="btn btn-sm  btn-success btn-block" href="{{url('update-profile',['user_id'=>Auth::user()->user_id])}}">Edit profile</a>
 
                   </div>
                 </td>
