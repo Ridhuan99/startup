@@ -25,16 +25,15 @@
           <td>{{ $members->name }}</td>
           <td>{{ $members->email }}</td>
           <td>{{ $members->role }}</td>
-
-          <!-- <td>{{ $members->is_active }}</td> -->
           <td>
-            <div class="form-group">
-                <select class="form-control" name="type">
-                    <option selected>{{ $members->is_active }}</option>
-                    <option value=1 @if(old('type', $members->is_active) === 1)  'selected' @endif>1</option>
-                    <option value=2 @if(old('type', $members->is_active) === 2)  'selected' @endif>2</option>
+            <form class="needs-validation" action="{{route('manageuser2',['user_id'=>$members->user_id])}}" method="post">
+                @csrf
+                <select class="form-control" name="is_active">
+                    <option value=1 {{ $members->is_active==1? 'selected' : '' }}>True</option>
+                    <option value=2 {{ $members->is_active==2? 'selected' : '' }}>False</option>
                 </select>
-            </div>
+                <button type="submit" class="btn btn-primary">{{ __('Update') }}</button>
+            </form>
           </td>
           <td>
             <a class="btn btn-sm  btn-success btn-block" href="{{url('update-profile',['user_id'=>$members->user_id])}}">Go</a>

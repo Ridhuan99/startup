@@ -74,8 +74,9 @@ class ManageUserController extends Controller
     public function update(Request $request, $id)
     {
       $user = User::find($id);
-      $user->is_active = $request->input('type');
+      $user->is_active = $request->input('is_active');
       $user->save();
+      return redirect('manageuser');
     }
 
     /**
