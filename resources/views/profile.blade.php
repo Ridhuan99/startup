@@ -80,7 +80,7 @@
                 <td colspan=2>
                   <div class="editProfileButton">
 
-                    <a class="btn btn-sm  btn-success btn-block" href="{{url('update-profile',['user_id'=>Auth::user()->user_id])}}">Edit profile</a>
+                    <a class="btn btn-primary  btn-success " href="{{url('update-profile',['user_id'=>Auth::user()->user_id])}}">Edit profile</a>
 
                   </div>
                 </td>

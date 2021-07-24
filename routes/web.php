@@ -52,5 +52,10 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 Route::get('/update-profile/{user_id}', [App\Http\Controllers\ProfileController::class, 'profile_update'])
 ->name('update-profile');
 
+Route::post('/update-profile/{user_id}', [App\Http\Controllers\ProfileController::class, 'updatePassword'])
+->name('update.user.password');
+
+
+
 
 Route::resource('profiles', ProfileController::class);
