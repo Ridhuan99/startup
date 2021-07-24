@@ -103,7 +103,8 @@ class ProfileController extends Controller
           ->where('user_id','=',$user)
           ->get();
 
-          return view('update-profile',['users'=> $user , 'profiles' => $profile , 'email' => $email]);
+          return view('update-profile',['user_id'=> $user , 'profiles' => $profile , 'email' => $email , 'user_id'=>$user_id]);
+
 
      }
 

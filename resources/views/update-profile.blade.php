@@ -33,7 +33,7 @@
       <h4>Change Profile</h4>
     </div>
     <div class="updateForm">
-      <form class="needs-validation" action="{{route('profiles.update', Auth::user()->user_id)}}" method="post">
+      <form class="needs-validation" action="{{route('profiles.update', $user_id)}}" method="post">
           @csrf
           @method('PUT')
 
@@ -105,7 +105,7 @@
       <h4>Change Password</h4>
     </div>
     <div class="updateForm">
-      <form class="needs-validation" action="{{route('update.user.password', Auth::user()->user_id)}}" method="post">
+      <form class="needs-validation" action="{{route('update.user.password', $user_id)}}" method="post">
           @csrf
 
           <div class="form-group row">
