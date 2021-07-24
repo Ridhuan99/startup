@@ -99,14 +99,11 @@ class ProfileController extends Controller
           ->where('user_id','=',$user)
           ->get();
 
-
           $profile = DB::table('profiles')
           ->where('user_id','=',$user)
           ->get();
 
-
           return view('update-profile',['users'=> $user , 'profiles' => $profile , 'email' => $email]);
-
 
      }
 
@@ -118,7 +115,7 @@ class ProfileController extends Controller
         'name' => 'required|string|max:255',
         'address' => 'required|string|max:255',
         'phone_number' => 'required|string|max:20',
-        'age' => 'required|string|max:3'
+        'age' => 'required|string|max:3',
       ]);
 
 
@@ -126,10 +123,35 @@ class ProfileController extends Controller
         ->where('user_id','=',$id)
         ->update(['name' => $request->name , 'age' => $request->age, 'phone_number' => $request->phone_number, 'address' => $request->address]);
 
+
         return Redirect()->route('profile')->with('success',"Successfully updated");
 
     }
 
+    public function updatePassword(Request $request, $id)
+    {
+
+      $validated = $request->validate([
+        'password' => ['string', 'min:8', 'confirmed'],
+        ]);
+
+      $user = DB::table('users')
+      ->where('user_id','=',$id);
+
+      if($request->filled('password')){
+            $request->merge(['password' => bcrypt($request->password)]);
+        }
+        unset($request['id']);
+		     if (!$request->password) {
+	        unset($request['password']);
+    		}
+        unset($request['password_confirmation']);
+
+        $user->update(['password' => $request->password]);
+
+
+      return Redirect()->route('profile')->with('success',"Successfully updated");
+    }
 
 
 

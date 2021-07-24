@@ -18,19 +18,6 @@
   ?>
 
 
-
-  {{-- <form method="POST" action="{{ route('edit-profile', Auth::user()->user_id) }}">
-    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-    <input type="hidden" name="_method" value="PUT">
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" value="{{ Auth::user()->email }}" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-primary">
-        <i class="fa fa-btn fa-sign-in"></i>Update
-    </button>
-</form> --}}
-
 @if(session('success'))
   <div class="alert alert-success" role="alert">
     <strong>{{session('success')}}</strong>
@@ -42,6 +29,9 @@
 
 <div class="col-md-12">
   <div class="card profilecard">
+    <div class="card-title">
+      <h4>Change Profile</h4>
+    </div>
     <div class="updateForm">
       <form class="needs-validation" action="{{route('profiles.update', Auth::user()->user_id)}}" method="post">
           @csrf
@@ -104,6 +94,51 @@
 
     </div>
   </div>
+</div>
+
+
+
+
+<div class="col-md-12">
+  <div class="card profilecard">
+    <div class="card-title">
+      <h4>Change Password</h4>
+    </div>
+    <div class="updateForm">
+      <form class="needs-validation" action="{{route('update.user.password', Auth::user()->user_id)}}" method="post">
+          @csrf
+
+          <div class="form-group row">
+              <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+              <div class="col-md-6">
+                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+
+                  @error('password')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+              <div class="col-md-6">
+                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" >
+              </div>
+          </div>
+
+      <button type="submit" class="profilesubmit">Submit</button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
 </div>
 
 
